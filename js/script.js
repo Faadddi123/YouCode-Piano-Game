@@ -1,12 +1,12 @@
-const pianoKeys = document.querySelectorAll(".piano-keys .key"),
-volumeSlider = document.querySelector(".volume-slider input"),
-keysCheckbox = document.querySelector(".keys-checkbox input");
+const pianoKeys = document.querySelectorAll(".piano-btns .btn")
+// volumeSlider = document.querySelector(".volume-slider input"),
+// keysCheckbox = document.querySelector(".keys-checkbox input");
 
 let allKeys = [],
-audio = new Audio(`tunes/a.wav`); // by default, audio src is "a" tune
+    audio = new Audio(`sound/play.wav`);
 
 const playTune = (key) => {
-    audio.src = `tunes/${key}.wav`; // passing audio src based on key pressed 
+    audio.src = `sound/${key}.wav`; // passing audio src based on key pressed 
     audio.play(); // playing audio
 
     const clickedKey = document.querySelector(`[data-key="${key}"]`); // getting clicked key element
@@ -33,7 +33,7 @@ const showHideKeys = () => {
 
 const pressedKey = (e) => {
     // if the pressed key is in the allKeys array, only call the playTune function
-    if(allKeys.includes(e.key)) playTune(e.key);
+    if (allKeys.includes(e.key)) playTune(e.key);
 }
 
 keysCheckbox.addEventListener("click", showHideKeys);
