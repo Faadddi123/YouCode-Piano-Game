@@ -1,4 +1,4 @@
-const pianoKeys = document.querySelectorAll(".piano-btns .btn")
+const pianoKeys = document.querySelectorAll(".piano-btns .btn") // getting all keys
 
 
 let allKeys = [],
@@ -6,9 +6,9 @@ let allKeys = [],
 
 
 
-const playTune = (key) => {
-    console.log("work")
-    audio.src = `sound/play.wav`; // passing audio src based on key pressed 
+const playSound = (key) => {
+
+    audio.src = `sound/${key}.wav`; // passing audio src based on key pressed 
     audio.play(); // playing audio
 
     const clickedKey = document.querySelector(`[data-key="${key}"]`); // getting clicked key element
@@ -20,17 +20,18 @@ const playTune = (key) => {
 }
 
 pianoKeys.forEach(key => {
-    allKeys.push(key.dataset.key); // adding data-key value to the allKeys array
-    // calling playTune function with passing data-key value as an argument
-    key.addEventListener("click", () => playTune(key.dataset.key));
+    allKeys.push(key.dataset.key); // addz data-key value to the allKeys array
+    // calling playSound function with passing data-key value as an argument
+    key.addEventListener("click", () => playSound(key.dataset.key));
 });
 
 
 
 
 const pressedKey = (e) => {
-    // if the pressed key is in the allKeys array, only call the playTune function
-    if (allKeys.includes(e.key)) playTune(e.key);
+    //check if the kat passed is in allkey array , if yes call playsound fun
+    if (allKeys.includes(e.key)) playSound(e.key);
+    console.log(`no sound belong this key #${e.key}`)
 }
 
 
