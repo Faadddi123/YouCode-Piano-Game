@@ -18,10 +18,15 @@
   border-radius: 8px;
   background: linear-gradient(#fff 96%, #eee 4%);
 }
-.piano-btns .white:active {
+
+.activeWhite {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 100%, #eee 100%);
+}
+/* .piano-btns .white:active {
   box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, #fff 0%, #eee 100%);
-}
+} */
 .piano-btns .black {
   width: 44px;
   height: 140px;
@@ -30,10 +35,15 @@
   border-radius: 0 0 5px 5px;
   background: linear-gradient(#333, #000);
 }
-.piano-btns .black:active {
+
+.activeBlack {
   box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
   background: linear-gradient(to bottom, #000, #434343);
 }
+/* .piano-btns .black:active {
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+} */
 
 .piano-btns span {
   position: absolute;
