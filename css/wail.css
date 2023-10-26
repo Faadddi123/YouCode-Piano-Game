@@ -4,6 +4,8 @@
   margin-top: 40px;
 }
 .piano-btns .btn {
+  cursor: pointer;
+  user-select: none;
   list-style: none;
   color: #a2a2a2;
   text-transform: uppercase;
@@ -15,8 +17,18 @@
   background: linear-gradient(#fff 96%, #eee 4%);
 }
 .piano-btns .black {
-  width: 70px;
-  height: 230px;
-  border-radius: 8px;
-  background: linear-gradient(#fff 96%, #eee 4%);
+  width: 44px;
+  height: 140px;
+  z-index: 2;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+
+.piano-btns .span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 1.13rem;
+  text-align: center;
 }
