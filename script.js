@@ -1,5 +1,6 @@
 const pianoKeys = document.querySelectorAll(".piano-btns .btn") // getting all keys
-
+const bg1Btn = document.getElementById("bg1")
+const bg2Btn = document.getElementById("bg2")
 
 let allKeys = []
 
@@ -28,13 +29,42 @@ pianoKeys.forEach(key => {
 });
 
 
+audioBG1 = new Audio(`sound/backgroundSound.mp3`);
+audioBG2 = new Audio(`sound/backgroundSound2.mp3`);
+
+const playBG1 = () => {
+    if (bg1Btn.classList.contains("checked")) {
+        bg1Btn.classList.remove("checked");
+        audioBG1.pause();
+    }
+    else {
+        bg1Btn.classList.add("checked");
+
+        audioBG1.play(); // playing audio
+    }
+
+}
+
+const playBG2 = () => {
+    if (bg2Btn.classList.contains("checked")) {
+        bg2Btn.classList.remove("checked");
+        audioBG2.pause();
+    }
+    else {
+        bg2Btn.classList.add("checked");
+
+        audioBG2.play(); // playing audio
+    }
+
+}
 
 
 const pressedKey = (e) => {
     //check if the kat passed is in allkey array , if yes call playsound fun
     if (allKeys.includes(e.key)) playSound(e.key);
-    // console.log(`no sound belong this key #${e.key}`)
+    console.log(`no sound belong this key #${e.key}`)
 }
-
+bg1Btn.addEventListener("click", playBG1)
+bg2Btn.addEventListener("click", playBG2)
 
 document.addEventListener("keydown", pressedKey);
