@@ -1,0 +1,50 @@
+.fadi{
+    display: flex;
+    color: white;
+}
+.button{
+    justify-content: space-between;
+    display: flex;
+}
+.check{
+    font-size: 25px;
+    justify-content: end;
+}
+.check input{
+appearance: none;
+background-color: red;
+width: 3rem;
+height: 1.5rem;
+border-radius: 1rem;
+}
+.check input:checked{
+    appearance: none;
+    background-color: rgb(34, 255, 0);
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    }
+.check input::before{
+    transition: all 0.3s ease;
+    position: absolute;
+    content: "";
+    transform: translateX(0);
+    background-color: rgb(126, 126, 126);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    
+    }
+
+.check input:checked:before{
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+        
+        
+        }
