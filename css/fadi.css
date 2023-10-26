@@ -1,14 +1,17 @@
 .fadi{
     display: flex;
     color: white;
+    justify-content: space-between;
 }
 .button{
-    justify-content: space-between;
     display: flex;
+    
+    
+    
 }
 .check{
     font-size: 25px;
-    justify-content: end;
+    
 }
 .check input{
 appearance: none;
