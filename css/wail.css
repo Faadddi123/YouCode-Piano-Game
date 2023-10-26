@@ -11,5 +11,12 @@
 .piano-btns .white {
   width: 70px;
   height: 230px;
+  border-radius: 8px;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-btns .black {
+  width: 70px;
+  height: 230px;
+  border-radius: 8px;
   background: linear-gradient(#fff 96%, #eee 4%);
 }
