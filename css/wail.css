@@ -4,6 +4,7 @@
   margin-top: 40px;
 }
 .piano-btns .btn {
+  position: relative;
   cursor: pointer;
   user-select: none;
   list-style: none;
@@ -11,10 +12,15 @@
   text-transform: uppercase;
 }
 .piano-btns .white {
+  margin: 0 2px;
   width: 70px;
   height: 230px;
   border-radius: 8px;
   background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-btns .white:active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
 }
 .piano-btns .black {
   width: 44px;
@@ -24,8 +30,12 @@
   border-radius: 0 0 5px 5px;
   background: linear-gradient(#333, #000);
 }
+.piano-btns .black:active {
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
 
-.piano-btns .span {
+.piano-btns span {
   position: absolute;
   bottom: 20px;
   width: 100%;
