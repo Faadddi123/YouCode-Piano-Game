@@ -1,0 +1,15 @@
+/*-- Piano Keys Styling Start Here --*/
+.piano-btns {
+  display: flex;
+  margin-top: 40px;
+}
+.piano-btns .btn {
+  list-style: none;
+  color: #a2a2a2;
+  text-transform: uppercase;
+}
+.piano-btns .white {
+  width: 70px;
+  height: 230px;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
